@@ -57,12 +57,15 @@
             </div>
 
             <div class="header-slide">
-                <div class="header-slide-list">
-                    <div class="header-slide-item image-box">
-                        <img src="assets/images/slider-1.jpg"  alt="" class="full-size-img">
+                <div class="header-slide-box">
+                    <div class="header-slide-list image-box">
+                        <img src="assets/images/slider-1.jpg"  alt="" class="slide-image full-size-img">
+                        <img src="assets/images/slider-2.jpeg"  alt="" class="slide-image full-size-img">
+                        <img src="assets/images/slider-3.jpeg"  alt="" class="slide-image full-size-img">
+                        <img src="assets/images/slider-4.jpg"  alt="" class="slide-image full-size-img">
                     </div>
                 </div>
-                <div class="header-slide-control">
+                <!-- <div class="header-slide-control">
                     <div class="prev-slide absolute-slide">
                         <i class="fa-solid fa-caret-left"></i>
                     </div>
@@ -76,7 +79,7 @@
                         <li></li>
                         <li></li>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="body-box">
@@ -438,7 +441,7 @@
             </div>
         </div>
         <iframe style="width: 100%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3779.6884832427527!2d105.67642291461303!3d18.67796996921692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3139ce71bd1f4147%3A0xad7d01d1f539f601!2zMzggS2ltIMSQ4buTbmcsIEjGsG5nIELDrG5oLCBUaMOgbmggcGjhu5EgVmluaCwgTmdo4buHIEFuLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1668423711059!5m2!1svi!2s"height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <div class="back-top"><img class="back-top-img" src="assets/images/arow-up.jpg" alt=""></div>
+        <div class="back-top"><img class="back-top-img" src="assets/images/arow-up-2.jpg" alt=""></div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <script>
@@ -454,6 +457,31 @@
                 $('html,body').animate({scrollTop:0},1000)
             }) 
         })
+        
+        var slideList = document.querySelector('.header-slide-list')
+        var slideItems = document.querySelectorAll('.slide-image') 
+
+
+        function changeSlide() {
+            var currentSlide = 0;
+            maxSlide = slideItems.length;
+            loadCurrentSlide = function() {
+                slideList.style.left = -currentSlide*100 + '%';
+            }
+            autoChangeSlide = function() {
+                currentSlide++;
+                if(currentSlide >= maxSlide) {
+                    currentSlide = 0;
+                }
+                loadCurrentSlide();
+            }
+            startChangeSlide = function() {
+                setInterval(autoChangeSlide,3000)
+                loadCurrentSlide();
+            }
+            startChangeSlide();
+        }
+        changeSlide();
     </script>
 </body>
 </html>

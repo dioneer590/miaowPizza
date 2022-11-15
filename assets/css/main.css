@@ -27,6 +27,7 @@
 }
 .header-slide {
     position: relative;
+    margin-top: 80px;
 }
 .header-slide-control {
     font-size: 4rem;
@@ -38,22 +39,36 @@
     transform: translateY(-50%);
     border-radius: 20px;
     padding: 20px;
-    background-color: #fac1cf;
+    color: #fff;
 }
 .next-slide {
     position: absolute;
     right: 10px;
+    color: #fff;
     top: 50%;
     transform: translateY(-50%);
     border-radius: 20px;
     padding: 20px;
-    background-color: #fac1cf;
 }
 .next-slide:hover,
 .prev-slide:hover {
     background-color:#f599b0 ;
     cursor: pointer;
 }
+
+.header-slide-box {
+    position: relative;
+}
+.header-slide-list {
+    position: relative;
+    display: flex;  
+    left: 00%;
+    transition: ease .5s;
+}
+.slide-image {
+    flex: 1 0 100%;
+}
+
 .change-slide {
     display: flex;
     position:absolute;
@@ -115,7 +130,7 @@
     padding: 100px;
 }
 .menu-img {
-    border-radius: 50px;
+    border-radius: 20px;
     aspect-ratio: 16/12;
     cursor: pointer;
 }
@@ -323,7 +338,7 @@
     margin: 8px 0;
 }
 .back-top-img {
-    width: 70px;
+    width: 50px;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -462,6 +477,7 @@
 .btn-buynow:hover {
     opacity: 0.8;
 }
+
 .show-product-bg {
     position: fixed;
     left: 0;
@@ -503,6 +519,12 @@
     border: 1px solid #ccc ;
     padding: 10px 20px ;
     border-radius: 10px;
+    cursor: pointer;
+}
+.show-size-item.active {
+    background-color: #f599b0;
+}
+.size-type, .size-desc {
     cursor: pointer;
 }
 .add-cart-btn {
