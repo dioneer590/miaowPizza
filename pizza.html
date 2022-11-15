@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ewert&family=Prompt:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/fontawesome-free-6.1.1-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="assets/css/grid_primary.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/reponsive.css">
+
+</head>
+<body>
+    <div id="main" >
+        <div class="header-box">
+            <div class="header-top-bg">
+                <div class="header-top container">
+                    <div class="header-logo">
+                        <img src="assets/images/Miwa_logo.png" alt="">
+                    </div>
+                    <div class="header-navbar">
+                        <a href="index.html" class="header-nav-link">
+                            <li class="header-nav-item">Trang chủ</li>
+                        </a>
+                        <a href="recommend.html" class="header-nav-link">
+                            <li class="header-nav-item">Giới Thiệu</li>
+                        </a>
+                        <li class="header-nav-item">
+                            Sản phẩm
+                            <div class="subnav-item-box">
+                                <a href="pizza.html" class="header-subnav-link">Bánh Pizza</a>
+                                <a href="drink-water.html" class="header-subnav-link">Nước giải khát</a>
+                                <a href="fast-food.html" class="header-subnav-link">Đồ ăn vặt khác</a>
+                            </div>
+                        </li>
+                        <a href="contaxt.html" class="header-nav-link">
+                            <li class="header-nav-item">Liên hệ</li>
+                        </a>
+                        <a href="" class="header-nav-link">
+                            <li class="header-nav-item">Giỏ hàng</li>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-slide">
+                <div class="header-slide-list">
+                    <div class="header-slide-item image-box">
+                        <img src="assets/images/slider-1.jpg"  alt="" class="full-size-img">
+                    </div>
+                </div>
+                <div class="header-slide-control">
+                    <div class="prev-slide absolute-slide">
+                        <i class="fa-solid fa-caret-left"></i>
+                    </div>
+                    <div class="next-slide absolute-slide">
+                        <i class="fa-solid fa-caret-right"></i>
+                    </div>
+                    <div class="change-slide absolute-slide">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="body-box pizza-body-bg" style="background-image: url(assets/images/bg_3.jpg);">
+            <div class="pizza-body-box">
+                <div class="container grid wide">
+                    <div class="row">
+                        <div class="col l-3">
+                            <div class="navbar">
+                                <div class="navbar-search-box navbar-box">
+                                    <div class="navbar-box-header font-header">
+                                        <h4>Tìm kiếm </h4>
+                                    </div>
+                                    <div class="navbar-box-body ">
+                                        <fieldset class="input-box">
+                                            <label class="form-label" for="">Bạn muốn đặt loại bánh nào ?</label>
+                                            <input class="input-value" type="text" placeholder="Nhập điểm đến của bạn">
+                                        </fieldset>
+                                        <fieldset class="input-box">
+                                            <label class="form-label" for="">Bạn muốn đặt size nào</label>
+                                            <input class="input-value" type="text" placeholder="Nhập điểm khởi hành">
+                                        </fieldset>
+                                        <fieldset class="input-box">
+                                            <label class="form-label" for="">Thời gian nhận bánh</label>
+                                            <input class="input-value-date" type="date">
+                                            <span>-</span>
+                                            <input class="input-value-date" type="date">
+                                        </fieldset>
+                                        <div class="button-box">
+                                            <button class="btn btn-success  nav-search-btn">Tìm kiếm</button>
+                                        </div>
+                                    </div>
+                               </div>
+    
+                               <div class="navbar-box">
+                                    <div class="navbar-box-header header-toggle ">
+                                        <h4>Mức giá</h4>
+                                        <i class="fa-solid fa-caret-down"></i>
+                                    </div>
+                                    <div class="navbar-box-body ">
+                                        <input type="checkbox" class="">
+                                        <label class="checkbox-price">Dưới 200.000</label><br>
+                                        
+                                        <input type="checkbox" class="">
+                                        <label class="checkbox-price">200.000-300.000</label><br>
+                                        <input type="checkbox" class="">
+                                        <label class="checkbox-price">300.000-400.000</label><br>
+                                        <input type="checkbox" class="">
+                                        <label class="checkbox-price">400.000-500.000</label><br>
+                                        <input type="checkbox" class="">
+                                        <label class="checkbox-price">Trên 500.000</label><br>
+                                    </div>
+                                </div>
+                                <div class="navbar-box">
+                                    <div class="navbar-box-header header-toggle">
+                                        <h4>Loại Tour</h4>
+                                        <i class="fa-solid fa-caret-down"></i>
+                                    </div>
+                                    <div class="navbar-box-body">
+                                        <input type="checkbox" class="">
+                                        <label class="">Neapolitan pizza</label><br>
+                                        <input type="checkbox" class="">
+                                        <label class="">Pizza Chicago</label><br>
+                                        <input type="checkbox" class="">
+                                        <label class="">Pizza Phô Mai</label><br>
+                                        <input type="checkbox" class="">
+                                        <label class="">Pizza California</label><br>
+                                        <input type="checkbox" class="">
+                                        <label class="">Pizza kem trứng</label><br>
+                                        <input type="checkbox" class="">
+                                        <label class="">Pizza Sicilian</label><br>
+                                        <input type="checkbox" class="">
+                                        <label class="">Pizza Bò cà ri</label><br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col l-9">
+                            <div class="list-product-box">
+                                <div class="product-container">
+                                    <h4 class="header-list-product">Khuyến mãi, Combo</h4>
+                                    <div class="row list-product">
+                                        
+                                    </div>
+                                </div>
+                                <div class="product-container">
+                                    <h4 class="header-list-product mt-50">Pizza được yêu thích</h4>
+                                    <div class="row list-product">
+                                        
+                                    </div>
+                                </div>
+                                <div class="product-container">
+                                    <h4 class="header-list-product mt-50">Pizza Truyền Thống</h4>
+                                    <div class="row list-product">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="show-product-bg">
+            <!-- <div class="show-product-box"> -->
+                
+            <!-- </div> -->
+        </div>
+        <div class="footer-box">
+            <div class="footer-info-bg" style="background-image:url(assets/images/footer-bg.jpg) ;">
+                <div class="footer-info">
+                    <div class="container grid wide">
+                        <div class="row">
+                            <div class="col l-4">
+                                <div class="footer-item text-center">
+                                    <div class="footer-logo header-logo">
+                                        <img src="assets/images/Miwa_logo.png" alt="">
+                                    </div>
+                                    <p class="footer-item-desc mt-4">Nếu còn đang băn khoăn chưa biết nên thưởng thức pizza ở đâu, đừng ngại ghé các cơ sở của Miaow Pizza  để trải nghiệm pizza kiểu Nhật và vô vàn những món hấp dẫn khác nhé!</p>
+                                </div>
+                            </div>
+                            
+                            <div class="col l-4">
+                                <div class="footer-item pl-5">
+                                    <h4 class="footer-item-header">Đường dẫn nhanh</h4>
+                                    <div class="footer-item-list mt-5">
+                                        <a href="" class="footer-item-link">
+                                            <i class="fa-solid fa-circle-check text-success"></i>
+                                            <span class="footer-item-desc">Trang chủ</span>
+                                        </a>
+                                        <a href="" class="footer-item-link">
+                                            <i class="fa-solid fa-circle-check text-success"></i>
+                                            <span class="footer-item-desc">Giới Thiệu</span>
+                                        </a>
+                                        <a href="" class="footer-item-link">
+                                            <i class="fa-solid fa-circle-check text-success"></i>
+                                            <span class="footer-item-desc">Sản phẩm</span>
+                                        </a>
+                                        <a href="" class="footer-item-link">
+                                            <i class="fa-solid fa-circle-check text-success"></i>
+                                            <span class="footer-item-desc">Liên Hệ</span>
+                                        </a>
+                                        <a href="" class="footer-item-link">
+                                            <i class="fa-solid fa-circle-check text-success"></i>
+                                            <span class="footer-item-desc">Giỏ hàng</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col l-4">
+                                <div class="footer-item">
+                                    <h4 class="footer-item-header">Thông tin liên hệ</h4>
+                                    <div class="footer-item-list mt-5">
+                                        <a href="" class="footer-item-link">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                            <span class="footer-item-desc">Số 38, Kim Đồng, Hưng Bình , TP Vinh, Nghệ An</span>
+                                        </a>
+                                        <a href="" class="footer-item-link ">
+                                            <i class="fa-solid fa-phone"></i>
+                                            <span class="footer-item-desc">Điện thoại: 0865760062</span>
+                                        </a>
+                                        <a href="" class="footer-item-link">
+                                            <i class="fa-solid fa-envelope"></i>
+                                            <span class="footer-item-desc">Gmail: dioneer590@gmail.com </span>
+                                        </a>
+                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <iframe style="width: 100%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3779.6884832427527!2d105.67642291461303!3d18.67796996921692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3139ce71bd1f4147%3A0xad7d01d1f539f601!2zMzggS2ltIMSQ4buTbmcsIEjGsG5nIELDrG5oLCBUaMOgbmggcGjhu5EgVmluaCwgTmdo4buHIEFuLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1668423711059!5m2!1svi!2s"height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="back-top"><img class="back-top-img" src="assets/images/arow-up.jpg" alt=""></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                if($(this).scrollTop() > 400) {
+                    $('.back-top-img').fadeIn();
+                } else {
+                    $('.back-top-img').fadeOut();
+                }
+            })
+            $('.back-top-img').click(function() {
+                $('html,body').animate({scrollTop:0},1000)
+            }) 
+
+        })
+
+        
+        
+        function getParentElement(element, selector) {
+            while(element.parentElement) {
+                if(element.parentElement.matches(selector)) {
+                    return element.parentElement
+                } else {
+                    element = element.parentElement;
+                }
+            }
+        }
+        
+
+        var productLists = document.querySelectorAll('.list-product')
+
+
+         var products = [
+            {
+                productId   : '1',
+                productName: 'Mua 1 tặng 1 Pizza size L',
+                productImage : 'pizza-sale-1.png',
+                productPrice : '280.000đ',
+                productDesc : 'Mua 1 Pizza size L tặng 1 Pizza cùng cỡ dòng Classic',
+                productType : 'Khuyến mãi, Combo'
+            },
+            {
+                productId   : '2',
+                productName: 'Combo 2 người',
+                productImage : 'pizza-sale-2.png',
+                productPrice : '200.000đ',
+                productDesc : '2 bánh pizza, 2 đồ ăn vặt, 2 nước ngọt',
+                productType : 'Khuyến mãi, Combo'
+            },
+            {
+                productId   : '3',
+                productName: 'Combo chất',
+                productImage : 'pizza-sale-3.png',
+                productPrice : '300.000đ',
+                productDesc : 'Đùi gà, nước ngọt, đồ ăn vặt',
+                productType : 'Khuyến mãi, Combo'
+            },
+            {
+                productId   : '4',
+                productName: 'Combo chất cho 3 người',
+                productImage : 'pizza-sale-4.png',
+                productPrice : '400.000đ',
+                productDesc : 'Đùi gà, bánh pizza size L, nước ngọt, đồ ăn vặt',
+                productType : 'Khuyến mãi, Combo'
+            },
+            {
+                productId   : '5',
+                productName: 'Combo chất cho 3 người',
+                productImage : 'pizza-sale-5.png',
+                productPrice : '220.000đ',
+                productDesc : 'Đùi gà, bánh pizza size L, nước ngọt, đồ ăn vặt',
+                productType : 'Khuyến mãi, Combo'
+            },
+            {
+                productId   : '6',
+                productName: 'Pizza size M giảm giá 50%',
+                productImage : 'pizza-sale-6.png',
+                productPrice : '100.000đ',
+                productDesc : 'Giảm giá 50% pizza size M trong hôm nay',
+                productType : 'Khuyến mãi, Combo'
+            },
+            
+            {
+                productId   : '7',
+                productName: 'Pizza Hải Sản Đào',
+                productImage : 'pizza-yt-1.png',
+                productPrice : '250.000đ',
+                productDesc : 'Tôm, Đào hoà quyện bùng nổ cùng sốt Thousand Island',
+                productType : 'Pizza được yêu thích'
+            },
+            {
+                productId   : '8',
+                productName: 'Pizza Hải Sản Pesto Xanh',
+                productImage : 'pizza-yt-2.png',
+                productPrice : '220.000đ',
+                productDesc : 'Tôm, cua, mực và bông cải xanh tươi ngon trên nền sốt Pesto Xanh',
+                productType : 'Pizza được yêu thích'
+            },
+            {
+                productId   : '9',
+                productName: 'Pizza Tôm Cocktail',
+                productImage : 'pizza-yt-3.png',
+                productPrice : '200.000đ',
+                productDesc : 'Tôm với nấm, dứa, cà chua và sốt Thousand Island',
+                productType : 'Pizza được yêu thích'
+            },
+            {
+                productId   : '10',
+                productName: 'Pizza Hải Sản Cocktail',
+                productImage : 'pizza-yt-4.png',
+                productPrice : '200.000đ',
+                productDesc : 'Tôm, cua, giăm bông,... với sốt Thousand Island<',
+                productType : 'Pizza được yêu thích'
+            },
+            {
+                productId   : '11',
+                productName: 'Pizza Thịt Xông Khói',
+                productImage : 'pizza-yt-5.png',
+                productPrice : '150.000đ',
+                productDesc : 'Thịt giăm bông, thịt xông khói và hai loại rau của ớt xanh, cà chua',
+                productType : 'Pizza được yêu thích'
+            },
+            {
+                productId   : '12',
+                productName: 'Pizza Gà Nướng 3 Vị',
+                productImage : 'pizza-yt-6.png',
+                productPrice : '200.000đ',
+                productDesc : 'Gà nướng, gà bơ tỏi và gà ướp sốt nấm',
+                productType : 'Pizza được yêu thích'
+            },
+            {
+                productId   : '13',
+                productName: 'Pizza Gà Nướng Dứa',
+                productImage : 'pizza-tt-1.png',
+                productPrice : '250.000đ',
+                productDesc : 'Thịt gà mang vị ngọt của dứa kết hợp với vị cay nóng của ớt',
+                productType : 'Pizza Truyền Thống'
+            },
+            {
+                productId   : '14',
+                productName: 'Pizza Phô Mai',
+                productImage : 'pizza-tt-2.png',
+                productPrice : '220.000đ',
+                productDesc : 'Bánh Pizza với vô vàn phô mai để bạn tha hồ tận hưởng.',
+                productType : 'Pizza Truyền Thống'
+            },
+            {
+                productId   : '15',
+                productName: 'Pizza Xúc Xích Ý',
+                productImage : 'pizza-tt--3.png',
+                productPrice : '200.000đ',
+                productDesc : 'Xúc xích cay kiểu Ý trên nền sốt cà chua',
+                productType : 'Pizza Truyền Thống'
+            },
+            {
+                productId   : '16',
+                productName: 'Pizza Thịt Nguội & Nấm',
+                productImage : 'pizza-tt-4.png',
+                productPrice : '200.000đ',
+                productDesc : 'Pizza giăm bông và nấm đem đến cho bạn những trải nghiệm thú vị.',
+                productType : 'Pizza Truyền Thống'
+            },
+            {
+                productId   : '17',
+                productName: 'Pizza Hawaiian',
+                productImage : 'pizza-tt-5.png',
+                productPrice : '150.000đ',
+                productDesc : 'Giăm bông, thịt muối và dứa',
+                productType : 'Pizza Truyền Thống'
+            },
+            {
+                productId   : '18',
+                productName: 'Pizza Rau Củ',
+                productImage : 'pizza-tt-6.png',
+                productPrice : '200.000đ',
+                productDesc : 'Hành, ớt chuông, nấm, dứa, cà chua',
+                productType : 'Pizza Truyền Thống'
+            }
+        ];
+        const app ={
+            
+            render() {
+                productLists.forEach((productList,index) => {
+                    var productContainer = getParentElement(productList, '.product-container')
+                    var productHeaderContent = productContainer.querySelector('.header-list-product').textContent
+                    console.log(productHeaderContent)
+
+                    const options = {
+                        productList : productList,
+                        productHeaderContent : productHeaderContent,
+                        maxProductItem : 6,
+                    }
+                    this.renderProduct(options);
+                    
+                })
+            },
+            
+            renderProduct(options) {
+                var filterProducts =  products.filter(function(product, index) {
+                    return product.productType.match(options.productHeaderContent)  ;
+                })
+                var html = filterProducts.map(function(productItem, index) {
+                    return `
+                    <div class="col l-4">
+                        <div class="item-product ${index % 3 == 1 && 'bg-item-1'} ${index % 3 == 2 && 'bg-item-2'}">
+                            <div class="pizza-product-image">
+                                <figure><img src="assets/images/${productItem.productImage}" alt="" class="full-size-img menu-img" style="border-radius: 0px;"> </figure>
+                            </div>
+                            
+                            <h4 class="pizza-name">${productItem.productName}</h4>
+                            <p class="pizza-product-desc">${productItem.productDesc}</p>
+                            <div class="price-box">
+                                <div class="price-box-left">
+                                    <p class="price-desc">Giá chỉ từ</p>
+                                    <span class="price-number">${productItem.productPrice}</span>
+                                </div>
+                                <div class="price-box-right">
+                                    <div class="button-box">
+                                        <button class="btn btn-buynow" data=${index} onclick="showCart(${productItem.productId})">Mua ngay <i class="ml-3 fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                })
+                options.productList.innerHTML = html.join('');
+            },
+            start() {
+                this.render()
+                this.renderProduct();
+                
+            }
+        }
+        app.start();
+        function showCart(index) {
+            var showProductBg = document.querySelector('.show-product-bg')
+            showProductBg.style.display = 'flex'
+            html = `
+                <div class="container grid wide show-product-box">
+                    <div class="close-show" onclick="closeShow()">
+                        <i class="fa-solid fa-close"></i>
+                    </div>
+                    <div class="row full-width height-center">   
+                        <div class="col l-5">
+                            <div class="show-product-left text-center">
+                                <div class="image-box">
+                                    <img src="assets/images/${products[index].productImage}" alt="" class="full-size-img">
+                                </div>
+                                <div class="show-product-price">
+                                    <span class="price-number mt-5">${products[index].productPrice}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-7">
+                            <div class="show-product-right">
+                                <h4 class="show-product-name">${products[index].productName}</h4>
+                                <p class="show-product-desc">${products[index].productDesc}</p>
+                                <div class="show-product-size">
+                                    <p class="show-size-header">KÍCH THƯỚC</p>
+                                    <div class="show-size-list">
+                                        <div class="show-size-item text-center">
+                                            <h4 class="size-type">Size S</h4>
+                                            <p class="size-desc">Bán kính 10cm</p>
+                                        </div>
+                                        <div class="show-size-item text-center">
+                                            <h4 class="size-type">Size M</h4>
+                                            <p class="size-desc">Bán kính 15cm</p>
+                                        </div>
+                                        <div class="show-size-item text-center">
+                                            <h4 class="size-type">Size L</h4>
+                                            <p class="size-desc">Bán kính 12cm</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="show-product-note">
+                                    <p class="show-size-header">GHI CHÚ</p>
+                                    <textarea name="" id="" class="form-control" placeholder="Nhập ghi chú của bạn tại đây" rows="5"></textarea>
+                                </div>
+                                <div class="button-box">
+                                    <button class="btn btn-danger  add-cart-btn" onclick="closeShow()">Thêm vào giỏ hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `
+            showProductBg.innerHTML = html
+        }
+        
+        // showCart();
+        var closeShow = document.querySelector('.close-show')
+        function closeShow() {
+            var showProductBg = document.querySelector('.show-product-bg')
+            setTimeout(() => {
+                showProductBg.style.display = 'none'
+            }, 200);
+        }
+    </script>
+</body>
+</html>
