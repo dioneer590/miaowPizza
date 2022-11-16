@@ -31,7 +31,13 @@
                     <div class="header-logo">
                         <img src="assets/images/Miwa_logo.png" alt="">
                     </div>
-                    <div class="header-navbar">
+                    <div class="open-menu-icon menu-icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <div class="close-menu-icon menu-icon">
+                        <i class="fa-solid fa-close"></i>
+                    </div>
+                    <div class="header-navbar hidden-mobile">
                         <a href="index.html" class="header-nav-link">
                             <li class="header-nav-item">Trang chủ</li>
                         </a>
@@ -53,6 +59,15 @@
                             <li class="header-nav-item">Giỏ hàng</li>
                         </a>
                     </div>
+                </div>
+                <div class="menu-mobile">
+                    <a href="index.html" class="header-subnav-link menu-mobile-item">Trang chủ</a>
+                    <a href="recommend.html" class="header-subnav-link menu-mobile-item">Giới Thiệu</a>
+                    <a href="pizza.html" class="header-subnav-link menu-mobile-item">Bánh Pizza</a>
+                    <a href="drink-water.html" class="header-subnav-link menu-mobile-item">Nước giải khát</a>
+                    <a href="fast-food.html" class="header-subnav-link menu-mobile-item">Đồ ăn vặt khác</a>
+                    <a href="contaxt.html" class="header-subnav-link menu-mobile-item">Liên hệ</a>
+                    <a href="shopping_cart.html" class="header-subnav-link menu-mobile-item">Giỏ hàng</a>
                 </div>
             </div>
 
@@ -203,6 +218,23 @@
                 $('html,body').animate({scrollTop:0},1000)
             }) 
         })
+
+        var openMenu = document.querySelector('.open-menu-icon')
+        var closeMenu = document.querySelector('.close-menu-icon')
+        var menuMobile = document.querySelector('.menu-mobile')
+        openMenu.onclick = function() {
+            menuMobile.style.right = 0;
+            closeMenu.style.display = 'block'
+            openMenu.style.display = 'none'
+        }
+        closeMenu.onclick = function() {
+            menuMobile.style.right = '-100%'
+            closeMenu.style.display = 'none'
+            openMenu.style.display = 'block'
+        }
+        
+        var slideList = document.querySelector('.header-slide-list')
+        var slideItems = document.querySelectorAll('.slide-image') 
         var slideList = document.querySelector('.header-slide-list')
         var slideItems = document.querySelectorAll('.slide-image') 
 

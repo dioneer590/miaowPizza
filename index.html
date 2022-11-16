@@ -31,7 +31,13 @@
                     <div class="header-logo">
                         <img src="assets/images/Miwa_logo.png" alt="">
                     </div>
-                    <div class="header-navbar">
+                    <div class="open-menu-icon menu-icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <div class="close-menu-icon menu-icon">
+                        <i class="fa-solid fa-close"></i>
+                    </div>
+                    <div class="header-navbar hidden-mobile">
                         <a href="index.html" class="header-nav-link">
                             <li class="header-nav-item">Trang chủ</li>
                         </a>
@@ -53,6 +59,15 @@
                             <li class="header-nav-item">Giỏ hàng</li>
                         </a>
                     </div>
+                </div>
+                <div class="menu-mobile">
+                    <a href="index.html" class="header-subnav-link menu-mobile-item">Trang chủ</a>
+                    <a href="recommend.html" class="header-subnav-link menu-mobile-item">Giới Thiệu</a>
+                    <a href="pizza.html" class="header-subnav-link menu-mobile-item">Bánh Pizza</a>
+                    <a href="drink-water.html" class="header-subnav-link menu-mobile-item">Nước giải khát</a>
+                    <a href="fast-food.html" class="header-subnav-link menu-mobile-item">Đồ ăn vặt khác</a>
+                    <a href="contaxt.html" class="header-subnav-link menu-mobile-item">Liên hệ</a>
+                    <a href="shopping_cart.html" class="header-subnav-link menu-mobile-item">Giỏ hàng</a>
                 </div>
             </div>
 
@@ -95,8 +110,8 @@
                         <div class="col l-8 c-12 text-center">
                             <div class="about-us-content">
                                 <img src="assets/images/slider-ic.png" alt="">
-                                <h4 class="mt-3 header-content font-header ">Chào mừng bạn đến với Pizza Kitchen</h4>
-                                <div class="about-us-desc">Là một nơi bạn có thể thỏa mãn mọi nhu cầu ăn uống của mình , là một nơi thư giãn đầu óc dưới phong cảnh thanh tĩnh trên nền nhạc thư giãn. Khi đến với các cửa hàng, thực khách sẽ được trải nghiệm bữa ăn trong không gian hoài cổ. Nội thất bên trong đa phần là tông màu gỗ ấm áp. Căn bếp có không gian mở, thông với nơi dùng bữa, bạn có thể xem trực tiếp các đầu bếp làm ra những chiếc bánh pizza. Nghe tiếng tanh tách của lửa cháy, mùi thơm của phô mai tan chảy. Hãy đến với Pizza Kitchen - nơi chữa lành cảm xúc của bạn</div>
+                                <h4 class="mt-3 header-content font-header ">Chào mừng bạn đến với Maiow Pizza</h4>
+                                <div class="about-us-desc">Là một nơi bạn có thể thỏa mãn mọi nhu cầu ăn uống của mình , là một nơi thư giãn đầu óc dưới phong cảnh thanh tĩnh trên nền nhạc thư giãn. Khi đến với các cửa hàng, thực khách sẽ được trải nghiệm bữa ăn trong không gian hoài cổ. Nội thất bên trong đa phần là tông màu gỗ ấm áp. Căn bếp có không gian mở, thông với nơi dùng bữa, bạn có thể xem trực tiếp các đầu bếp làm ra những chiếc bánh pizza. Nghe tiếng tanh tách của lửa cháy, mùi thơm của phô mai tan chảy. Hãy đến với Maiow Pizza - nơi chữa lành cảm xúc của bạn</div>
                             </div>
                         </div>
                     </div>
@@ -298,11 +313,11 @@
                                 <div class="book-form text-center">
                                     <h4 class="book-form-header font-header">ĐIỀN ĐƠN ĐẶT HÀNG</h4>
                                     <div class="book-form-box">
-                                        <input type="text" class="form-control form-input" placeholder="Tên của bạn (*) ">
-                                        <input type="text" class="form-control form-input" placeholder="Email  ">
-                                        <input type="text" class="form-control form-input" placeholder="Số điện thoại (*) ">
-                                        <input type="text" class="form-control form-input" placeholder="Địa chỉ (*) ">
-                                        <textarea name="" id="" class="form-control form-input" placeholder="Thông tin loại bánh bạn muốn đặt (*) " rows="3"></textarea>
+                                        <input type="text" class="form-control book-form-value form-input" placeholder="Tên của bạn (*) ">
+                                        <input type="text" class="form-control book-form-value form-input" placeholder="Email  ">
+                                        <input type="text" class="form-control book-form-value form-input" placeholder="Số điện thoại (*) ">
+                                        <input type="text" class="form-control book-form-value form-input" placeholder="Địa chỉ (*) ">
+                                        <textarea name="" id="" class="form-control book-form-value form-input" placeholder="Thông tin loại bánh bạn muốn đặt (*) " rows="3"></textarea>
                                         <button class="btn btn-danger btn-send">Đặt hàng ngay</button>
                                     </div>
                                     <img src="assets/images/order-man.png" class="order-man hidden-mobile" alt="">
@@ -368,8 +383,24 @@
                     </div>
                 </div>
             </div>
-
-            
+        </div>
+        <div class="thongbao thongbaodung">
+            <div class="check-icon">
+                <i class="fa-solid fa-circle-check text-success"></i>
+            </div>
+            <div class="noidung">
+                <h4 class="text-success">Bạn đã đặt hàng thành công</h4>
+                <p >Vui lòng đợi xác nhận của nhà hàng</p>
+            </div>
+        </div>
+        <div class="thongbao thongbaosai">
+            <div class="check-icon">
+                <i class="fa-solid fa-circle-xmark text-danger"></i>
+            </div>
+            <div class="noidung">
+                <h4 class="text-danger">Bạn nhập thiếu thông tin</h4>
+                <p >Vui lòng điền đầy đủ thông tin</p>
+            </div>
         </div>
         <div class="footer-box">
             <div class="footer-info-bg" style="background-image:url(assets/images/footer-bg.jpg) ;">
@@ -454,6 +485,20 @@
                 $('html,body').animate({scrollTop:0},1000)
             }) 
         })
+
+        var openMenu = document.querySelector('.open-menu-icon')
+        var closeMenu = document.querySelector('.close-menu-icon')
+        var menuMobile = document.querySelector('.menu-mobile')
+        openMenu.onclick = function() {
+            menuMobile.style.right = 0;
+            closeMenu.style.display = 'block'
+            openMenu.style.display = 'none'
+        }
+        closeMenu.onclick = function() {
+            menuMobile.style.right = '-100%'
+            closeMenu.style.display = 'none'
+            openMenu.style.display = 'block'
+        }
         
         var slideList = document.querySelector('.header-slide-list')
         var slideItems = document.querySelectorAll('.slide-image') 
@@ -479,6 +524,32 @@
             startChangeSlide();
         }
         changeSlide();
+        var bookFormValues = document.querySelectorAll('.book-form-value')
+        var thongbaodung = document.querySelector('.thongbaodung')
+        var thongbaosai = document.querySelector('.thongbaosai')
+        var btnSend = document.querySelector('.btn-send')
+        var isNull = true;
+        function checkForm() {
+            var numberDataNull = 0;
+            bookFormValues.forEach((bookFormValue, index) => {
+                bookFormValue.value == '' ? isNull=false : isNull = true;  
+            })
+            return isNull;
+        }
+        btnSend.onclick = function() {
+            var check = checkForm();
+            if(check) {
+                thongbaodung.style.right = '0'
+                setTimeout(() => {
+                    thongbaodung.style.right ='-100%'
+                }, 5000);
+            } else {
+                thongbaosai.style.right = '0'
+                setTimeout(() => {
+                    thongbaosai.style.right ='-100%'
+                }, 5000);
+            }
+        }
     </script>
 </body>
 </html>
