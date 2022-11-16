@@ -61,11 +61,15 @@ html {
 .primary-text-color {
     color: rgb(199, 237, 8);
 }
-
+.space  {
+    width: 100%;
+    border-bottom: 1px dashed #ff3f73;
+    margin: 4px 0;
+}
 .full-size-img {
     width: 100%;
 }
-.half-size-image {
+.half-size-img {
     width: 50%;
 }
 .height-center {
@@ -78,9 +82,20 @@ html {
     width: 100%;
 }
 
+
+.btn-payment {
+    font-size:2rem;
+    padding: 4px 20px;
+}
 .send-btn {
     font-size: 1.6rem;
     padding: 8px 30px;
+}
+.border-left {
+    border-left: 1px dashed #ff3f73;
+}
+.border-right {
+    border-right: 1px dashed #ff3f73;
 }
 
 figure {

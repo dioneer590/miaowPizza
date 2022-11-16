@@ -613,6 +613,7 @@
 }
 .form-contaxt-label {
     margin-top: 10px;
+    font-size: 1.6rem;
 }
 .form-value {
     padding: 10px;
@@ -629,4 +630,74 @@
     color: #ff3f73;
     font-weight: 600;
     font-family: 'Times New Roman', Times, serif;
+}
+
+
+.cart-list {
+    padding: 10px;
+}
+.cart-item {
+    border: 1px dashed #ff3f73;
+}
+.cart-name {
+    color: #ff3f73;
+    margin-bottom: 10px;
+}
+.cart-price {
+    font-size: 1.6rem;
+    color: #ff3f73;
+    font-weight: 600;
+}
+.cart-number {
+    width: 45px;
+    text-align: center;
+    border-radius: 4px;
+    padding: 6px;
+    font-size: 2rem;
+}
+.change-qty {
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: #f599b0;
+    margin:6px;
+    border-radius: 4px;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+}
+.cart-delete {
+    font-size: 2rem;
+    cursor: pointer;
+}
+.cart-delete:hover i {
+    color: red;
+    cursor: pointer;
+} 
+.cart-desc {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+.total-box {
+    font-size: 1.6rem;
+    margin-right: 10px;
+    padding: 10px 20px;
+    /* background-color: yellowgreen; */
+    border-radius: 10px;
+    justify-content: space-around;
+    display: flex;
+}
+.total-value {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.payment-form {
+    padding: 16px;
+}
+.cart-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
