@@ -55,9 +55,7 @@ html {
 .font-header {
     font-family: 'Playfair Display', serif;
 }
-.hidden-pc {
-    display: none;
-}
+
 .primary-text-color {
     color: rgb(199, 237, 8);
 }
@@ -96,6 +94,9 @@ html {
 }
 .border-right {
     border-right: 1px dashed #ff3f73;
+}
+.form-label {
+    width : 100%;
 }
 
 figure {

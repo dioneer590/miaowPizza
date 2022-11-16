@@ -162,10 +162,7 @@
 .pizza-product-box {
     background: linear-gradient(0deg, #000000 0%, rgb(8 8 8 / 50%) 100%);
     padding: 50px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    
 }
 .pizza-product {
     position: relative;
