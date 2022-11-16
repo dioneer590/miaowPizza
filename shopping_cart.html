@@ -364,6 +364,16 @@
                 $('html,body').animate({scrollTop:0},1000)
             }) 
         })
+
+        var cartDeletes = document.querySelectorAll('.cart-delete')
+        var cartItems = document.querySelectorAll('.cart-item')
+
+        cartDeletes.forEach((cartDelete,index) => {
+            cartDelete.onclick = function() {
+                cartItems[index].style.display = 'none'
+            }
+        });
+
         var slideList = document.querySelector('.header-slide-list')
         var slideItems = document.querySelectorAll('.slide-image') 
 
