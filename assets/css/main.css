@@ -708,7 +708,7 @@
     display: flex;
     top: 80px;
     box-shadow: 0 0 5px #fff;
-    right: -100%;
+    right: -150%;
     border-radius: 10px;
     align-items: center;
     z-index: 5;
