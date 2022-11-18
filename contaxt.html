@@ -97,7 +97,24 @@
                 </div> -->
             </div>
         </div>
-        
+        <div class="thongbao thongbaodung">
+            <div class="check-icon">
+                <i class="fa-solid fa-circle-check text-success"></i>
+            </div>
+            <div class="noidung">
+                <h4 class="text-success">Bạn đã đặt hàng thành công</h4>
+                <p >Vui lòng đợi xác nhận của nhà hàng</p>
+            </div>
+        </div>
+        <div class="thongbao thongbaosai">
+            <div class="check-icon">
+                <i class="fa-solid fa-circle-xmark text-danger"></i>
+            </div>
+            <div class="noidung">
+                <h4 class="text-danger">Bạn nhập thiếu thông tin</h4>
+                <p >Vui lòng điền đầy đủ thông tin</p>
+            </div>
+        </div>
         <div class="body-box contaxt-section">
             <div class="container grid wide">
                 <div class="contaxt-box">
@@ -245,6 +262,33 @@
             menuMobile.style.right = '-100%'
             closeMenu.style.display = 'none'
             openMenu.style.display = 'block'
+        }
+
+        var bookFormValues = document.querySelectorAll('.form-value')
+        var thongbaodung = document.querySelector('.thongbaodung')
+        var thongbaosai = document.querySelector('.thongbaosai')
+        var btnSend = document.querySelector('.btn-send')
+        var isNull = true;
+        function checkForm() {
+            var numberDataNull = 0;
+            bookFormValues.forEach((bookFormValue, index) => {
+                bookFormValue.value == '' ? isNull=false : isNull = true;  
+            })
+            return isNull;
+        }
+        btnSend.onclick = function() {
+            var check = checkForm();
+            if(check) {
+                thongbaodung.style.right = '0'
+                setTimeout(() => {
+                    thongbaodung.style.right ='-100%'
+                }, 5000);
+            } else {
+                thongbaosai.style.right = '0'
+                setTimeout(() => {
+                    thongbaosai.style.right ='-100%'
+                }, 5000);
+            }
         }
         
         var slideList = document.querySelector('.header-slide-list')

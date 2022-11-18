@@ -97,7 +97,24 @@
                 </div> -->
             </div>
         </div>
-        
+        <div class="thongbao thongbaodung">
+            <div class="check-icon">
+                <i class="fa-solid fa-circle-check text-success"></i>
+            </div>
+            <div class="noidung">
+                <h4 class="text-success">Bạn đã đặt hàng thành công</h4>
+                <p >Vui lòng đợi xác nhận của nhà hàng</p>
+            </div>
+        </div>
+        <div class="thongbao thongbaosai">
+            <div class="check-icon">
+                <i class="fa-solid fa-circle-xmark text-danger"></i>
+            </div>
+            <div class="noidung">
+                <h4 class="text-danger">Bạn nhập thiếu thông tin</h4>
+                <p >Vui lòng điền đầy đủ thông tin</p>
+            </div>
+        </div>
         <div class="body-box contaxt-section">
             <div class="container grid wide">
                 <h4 class="text-center header-recommend">Giỏ hàng của tôi</h4>
@@ -267,27 +284,27 @@
                                 <div class="contaxt-form ">
                                     <fieldset>
                                         <label for="" class="form-contaxt-label">Họ và Tên </label>
-                                        <input type="text" placeholder="Nhập tên của bạn" class="form-control form-value">
+                                        <input type="text" placeholder="Nhập tên của bạn" class="form-control form-value form-value-1">
                                     </fieldset>
                                     <fieldset>
                                         <label for="" class="form-contaxt-label">Số điện thoại </label>
-                                        <input type="text" placeholder="Nhập số điện thoại của bạn" class="form-control form-value">
+                                        <input type="text" placeholder="Nhập số điện thoại của bạn" class="form-control form-value form-value-1">
                                     </fieldset>
                                     <fieldset>
                                         <label for="" class="form-contaxt-label">Địa chỉ nhận </label>
-                                        <input type="text" placeholder="Nhập địa chỉ của bạn" class="form-control form-value">
+                                        <input type="text" placeholder="Nhập địa chỉ của bạn" class="form-control form-value form-value-1">
                                     </fieldset>
                                     <fieldset>
                                         <label for="" class="form-contaxt-label">Hình thức thanh toán </label>
-                                        <input type="text" placeholder="Online | Trực tiếp " class="form-control form-value">
+                                        <input type="text" placeholder="Online | Trực tiếp " class="form-control form-value form-value-1">
                                     </fieldset>
                                     <fieldset>
                                         <label for="" class="form-contaxt-label">Mã giảm giá ( nếu có )</label>
-                                        <input type="text" placeholder="Mã giảm giá " class="form-control form-value">
+                                        <input type="text" placeholder="Mã giảm giá " class="form-control form-value ">
                                     </fieldset>
                                     <fieldset>
                                         <label for="" class="form-contaxt-label">Ghi chú </label>
-                                        <textarea name="" placeholder="Nhập ghi chú" class="form-control form-value" id="" rows="3"></textarea>
+                                        <textarea name="" placeholder="Nhập ghi chú" class="form-control form-value " id="" rows="3"></textarea>
                                     </fieldset>
                                     <div class="button-box mt-3">
                                         <button class="btn btn-success btn-payment mb-5">Mua ngay</button>
@@ -383,6 +400,34 @@
                 $('html,body').animate({scrollTop:0},1000)
             }) 
         })
+
+
+        var bookFormValues = document.querySelectorAll('.form-value-1')
+        var thongbaodung = document.querySelector('.thongbaodung')
+        var thongbaosai = document.querySelector('.thongbaosai')
+        var btnSend = document.querySelector('.btn-payment')
+        var isNull = true;
+        function checkForm() {
+            var numberDataNull = 0;
+            bookFormValues.forEach((bookFormValue, index) => {
+                bookFormValue.value == '' ? isNull=false : isNull = true;  
+            })
+            return isNull;
+        }
+        btnSend.onclick = function() {
+            var check = checkForm();
+            if(check) {
+                thongbaodung.style.right = '0'
+                setTimeout(() => {
+                    thongbaodung.style.right ='-100%'
+                }, 5000);
+            } else {
+                thongbaosai.style.right = '0'
+                setTimeout(() => {
+                    thongbaosai.style.right ='-100%'
+                }, 5000);
+            }
+        }
 
         var openMenu = document.querySelector('.open-menu-icon')
         var closeMenu = document.querySelector('.close-menu-icon')
